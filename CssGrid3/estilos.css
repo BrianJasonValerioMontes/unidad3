@@ -1,0 +1,35 @@
+.contenedor{
+    background-color: rgb(112, 111, 110);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+    
+    gap: 10px;
+}
+
+.elemento{
+    background-color: rgb(199, 61, 37);
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px black, 
+                inset 3px 3px 2px white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.e1, .e5{
+    grid-column: 1 / span 3;
+}
+
+@media all and (max-width:500px){
+    .e2, .e3, .e4{
+        grid-column: 1 / span 3;
+    }
+    .contenedor{
+        grid-template-rows: repeat(5, 100px);
+    }
+}
+
+
